@@ -1,0 +1,2 @@
+Code für einen kleines Nebenprojekt, zur Steuerung von LED's auf einem Bilderrahmen. 
+Jeder Rahmen hat einen ATTiny verbaut, dieser gibt eine voreingestellte Farbe auf die LEDs aus und legt sich schlafen. Sollte es einen Mastercontroller geben, kann sich der ATTiny über I2C identifizieren, wiedergeben an welcher Stelle er sitzt und übermitteln welche Farbe er hat.

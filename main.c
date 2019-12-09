@@ -101,9 +101,10 @@ void onReceive(uint8_t count){
 			uint8_t anzahl = c_LedAnzahl;
 
 			if(count == 1 || count == 5){
-				anzahl = usiTwiReceiveByte();	
+				anzahl = usiTwiReceiveByte();
+				count--;	
 			}
-			count--;
+			
 			for(uint8_t i = 0; i < 4;i++){
 				if(count != 4){
 					farbe[i] = eeprom_read_byte((uint8_t*)(i+3));

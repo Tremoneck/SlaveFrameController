@@ -31,7 +31,7 @@ $(TARGET).elf: $(OBJECTS)
 .c.o:
 	avr-gcc $(CFLAGS) -mmcu=$(MCU) $< -o $@
 
-size:
+size: hex eeprom
 #	avr-size --mcu=$(MCU) -C $(TARGET).elf
 	((Get-Item $(TARGET).hex).length)
 	(Get-Item $(TARGET)_eeprom.hex).length

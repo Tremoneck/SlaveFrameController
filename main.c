@@ -70,7 +70,7 @@ void onReceive(uint8_t count){
 	switch (i2cmode)
 	{
 	case 'a': //adresse neu konfigurieren
-		if(usiTwiReceiveByte() != 0xde) // Make sure not every silly straigh command may change the adresse
+		if(usiTwiReceiveByte() != 0xde) // Make sure not every silly stray command may change the adresse
 			break;
 		eeprom_update_byte((uint8_t*)2, usiTwiReceiveByte());
 		usiTwiSlaveInit(eeprom_read_byte((uint8_t*)2));

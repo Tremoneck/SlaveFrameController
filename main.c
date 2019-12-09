@@ -179,7 +179,7 @@ ISR(SIG_PIN_CHANGE){ //Erkennen ob PIN 3 Verändert wurde
 	PCMSK = _BV(LEDPIN); //Reaktivieren, damit einschlafen funktioniert
 }
 
-void zeichneFarbe(uint8_t anzahl, uint8_t* farbe){
+void __attribute__ ((noinline)) zeichneFarbe(uint8_t anzahl, uint8_t* farbe){
 
 	uint8_t bit  = 8;
 	uint8_t index = 4;
